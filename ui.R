@@ -52,11 +52,27 @@ ui <- fluidPage(
                           inline = T, selected = 1), hr(),
              fluidRow( column(3, verbatimTextOutput("value"))),
              
+             actionButton("action", label = "Notificar"), hr(),
+             fluidRow(column(2, verbatimTextOutput("valueA"))),
+             
+             
+             
+             
              # Tips
              radioButtons("radio1", label = h3("Tips"),
                          choices = list("Cargado" = 1, "Medio" = 2, "En falta" = 3),
                          inline = T, selected = 1), hr(),
              fluidRow(column(3, verbatimTextOutput("value1"))),
+             
+             selectInput("select1", label = NULL, 
+                         choices = list("Azul" = 1, "Amarillo" = 2, "5 ml" = 3, "Todos" = 4), 
+                         selected = 1), hr(),
+             fluidRow(column(3, verbatimTextOutput("valueS1"))),
+             
+             actionButton("action1", label = "Notificar"), hr(),
+             fluidRow(column(2, verbatimTextOutput("valueA1"))),
+             
+             
              
              
              # Guantes
@@ -65,6 +81,16 @@ ui <- fluidPage(
                           inline = T, selected = 1), hr(),
              fluidRow(column(3, verbatimTextOutput("value2"))),
              
+             selectInput("select2", label = NULL, 
+                         choices = list("S" = 1, "M" = 2, "L" = 3, "Todos" = 4), 
+                         selected = 1), hr(),
+             fluidRow(column(3, verbatimTextOutput("valueS2"))),
+             
+             actionButton("action2", label = "Notificar"), hr(),
+             fluidRow(column(2, verbatimTextOutput("valueA2"))),
+             
+             
+             
              
              # Algodon
              radioButtons("radio3", label = h3("Algodón"),
@@ -72,12 +98,20 @@ ui <- fluidPage(
                           inline = T, selected = 1), hr(),
              fluidRow(column(3, verbatimTextOutput("value3"))),
              
+             actionButton("action3", label = "Notificar"), hr(),
+             fluidRow(column(2, verbatimTextOutput("valueA3"))),
+             
+             
+             
              
              # Papel absorbente
              radioButtons("radio4", label = h3("Papel absorbente"),
                           choices = list("Cargado" = 1, "Medio" = 2, "En falta" = 3),
                           inline = T, selected = 1), hr(),
-             fluidRow(column(3, verbatimTextOutput("value4")))
+             fluidRow(column(3, verbatimTextOutput("value4"))),
+             
+             actionButton("action4", label = "Notificar"), hr(),
+             fluidRow(column(2, verbatimTextOutput("valueA4")))
              
              
              ),
@@ -91,11 +125,17 @@ ui <- fluidPage(
                            inline = T, selected = 1), hr(),
                 fluidRow( column(3, verbatimTextOutput("value21"))),
               
+              actionButton("action21", label = "Notificar"), hr(),
+              fluidRow(column(2, verbatimTextOutput("valueA21"))),
+              
               # Alcohol
               radioButtons("radio22", label = h3("Alcohol"),
                            choices = list("Cargado" = 1, "Medio" = 2, "En falta" = 3),  
                            inline = T, selected = 1), hr(),
-              fluidRow( column(3, verbatimTextOutput("value22")))
+              fluidRow( column(3, verbatimTextOutput("value22"))),
+              
+              actionButton("action22", label = "Notificar"), hr(),
+              fluidRow(column(2, verbatimTextOutput("valueA22")))
               
               ),
       
@@ -108,8 +148,9 @@ ui <- fluidPage(
 )
 
 #server <- function(input, output, session) {
-  
-  
+
+#output$value <- renderPrint({ input$radio })
+
 #}
 
 #shinyApp(ui, server)
