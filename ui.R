@@ -1,6 +1,3 @@
-## Demo - adding icons to menu items in shinydashboard and style them
-## Load the required packages
-
 library(shiny)
 library(shinydashboard)
 
@@ -20,25 +17,16 @@ ui <- fluidPage(
                        menuItem(" Equipos", tabName = "menu3", icon=icon("scale", lib =  "glyphicon")),
                        
                        ## 4
-                       menuItem("Recepción de Expedientes", tabName = "menu4", icon=icon("modal-window", lib =  "glyphicon")),
+                       menuItem("Protocolos", tabName = "menu4", icon=icon("modal-window", lib =  "glyphicon")),
+    
+                       ## 5
+                       menuItem("Scrips", tabName = "menu5", icon=icon("modal-window", lib =  "glyphicon"))
                        
-                       
-                       # using pulse class to rotate icon in 8 steps
-                    #   menuItem(" ... ", tabName = "menu5", icon=icon("cog", class = "fa-pulse")),
-                       
-                       # using border class to add a border to icon
-                    #   menuItem("...", tabName = "menu6", icon=icon("cog", class = "fa-border")),
-                       
-                       ## Add a icon from glyphicon library
-                    #   menuItem("HourGlass", tabName = "menu7", icon=icon("hourglass", lib =  "glyphicon")),
-                       
-                       # a square icon from fontawesome library
-                    #   menuItem("BoxStatus", tabName = "menu8", icon = icon("square")),
-                       
-                       # coloured square icon
-                      # menuItem("BoxColor", tabName = "menu9", icon=icon("square", class="mystyle")),
-                       tags$style(".mystyle {color:yellow;}")
-                       
+    
+                      #square icon from fontawesome library
+                      #menuItem("BoxStatus", tabName = "menu8", icon = icon("square")),
+               
+              
                      )
     ),
     
