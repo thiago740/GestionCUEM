@@ -20,7 +20,7 @@ ui <- fluidPage(
                        menuItem("Protocolos", tabName = "menu4", icon=icon("modal-window", lib =  "glyphicon")),
     
                        ## 5
-                       menuItem("Scrips", tabName = "menu5", icon=icon("modal-window", lib =  "glyphicon"))
+                       menuItem("Scripts", tabName = "menu5", icon=icon("modal-window", lib =  "glyphicon"))
                        
     
                       #square icon from fontawesome library
